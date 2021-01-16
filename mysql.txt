@@ -1,0 +1,71 @@
+desc booking
+----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| username | varchar(10) | NO   | PRI | NULL    |       |
+| src      | varchar(20) | NO   |     | NULL    |       |
+| desti    | varchar(20) | NO   |     | NULL    |       |
+| date     | date        | NO   |     | NULL    |       |
+| no_pass  | int(11)     | NO   |     | NULL    |       |
+| class    | varchar(10) | NO   |     | NULL    |       |
+| fare     | int(11)     | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+desc register;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| first    | varchar(20) | NO   |     | NULL    |       |
+| last     | varchar(20) | NO   |     | NULL    |       |
+| username | varchar(10) | NO   | PRI | NULL    |       |
+| password | varchar(10) | NO   |     | NULL    |       |
+| email    | varchar(10) | NO   |     | NULL    |       |
+| phone    | int(11)     | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+desc login;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| username | varchar(10) | NO   | PRI | NULL    |       |
+| password | varchar(10) | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+desc admin;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| username | varchar(10) | NO   | PRI | NULL    |       |
+| password | varchar(10) | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+
+desc flight;
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| fcode      | int(11)     | NO   | PRI | NULL    |       |
+| name       | varchar(20) | NO   |     | NULL    |       |
+| src        | varchar(20) | NO   |     | NULL    |       |
+| desti      | varchar(20) | NO   |     | NULL    |       |
+| depar_time | time        | NO   |     | NULL    |       |
+| arri_time  | time        | NO   |     | NULL    |       |
+| fare       | int(11)     | NO   |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
+
+ desc payment;
++----------+-------------+------+-----+---------+-------+
+| Field    | Type        | Null | Key | Default | Extra |
++----------+-------------+------+-----+---------+-------+
+| type     | varchar(10) | NO   |     | NULL    |       |
+| amt      | int(11)     | NO   |     | NULL    |       |
+| card_no  | int(11)     | NO   | PRI | NULL    |       |
+| exp_date | date        | NO   |     | NULL    |       |
++----------+-------------+------+-----+---------+-------+
+
+trigger:
+DROP TRIGGER IF EXISTS `insert_log`;CREATE DEFINER=`root`@`localhost` TRIGGER `insert_log` AFTER INSERT ON `register` FOR EACH ROW insert into backup values (null, NEW.username,'Inserted', NOW())
+
+
+stored procedure:
+DROP PROCEDURE `getflight`; CREATE DEFINER=`root`@`localhost` PROCEDURE `getflight`() NOT DETERMINISTIC CONTAINS SQL SQL SECURITY DEFINER SELECT * FROM flight
