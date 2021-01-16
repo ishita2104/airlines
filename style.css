@@ -1,0 +1,239 @@
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section { 
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000; 
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;   
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+/*-------------------------------------------------------------------------------------------------------------*/
+.wraper
+{
+    height:660px;
+    width: 1350px; 
+}
+header
+{
+    height: 115px;
+    width: 1350px;
+    background-color: black;
+}
+section
+{
+    
+    height: 470px;
+    width: 1350px;
+    background-color:grey;
+    
+}
+footer
+{
+    height: 80px;
+    width: 1350px;
+    background-color: black;
+}
+.logo
+{
+    float: left;
+   
+}
+.logo img
+{
+    height: 85px;
+    width: 120px;
+    padding: 15px;
+}
+
+li a
+{
+    color: white;
+    text-decoration: none;
+}
+/*nav
+{
+    float: right;
+    word-spacing: 20px;
+    padding: 20px;
+}
+nav li
+{
+    display: inline-block;
+    line-height: 80px;
+}*/
+.back img
+{
+    height:450px;
+    width: 1361px;
+
+}
+.sec_img
+{
+    background-image: url("images/1.jpg");
+    height: 470px;
+    width: 1350px;
+    /*margin-top: 0px;*/
+}
+.box
+{
+    height: 60px;
+    width: 400px;
+    background-color: red;
+    /*padding: 5px;*/
+    margin: 20px auto;
+    
+    color: black;
+}
+/*------------------------------------------------------login.html-----------------------------*/
+section .log_img
+{
+    /*background-image: url("images/5.jpg");*/
+    background-color: grey;
+    height: 600px;
+    width: 1390px;
+}
+.box1
+{
+    height: 340px;
+    width: 350px;
+    background-color: maroon;
+    /*padding: 5px;*/
+    margin: 20px auto;
+    color: black;
+}
+form .login
+{
+    margin: auto 50px ;
+}
+input
+{
+    height: 25px;
+    width: 200px;
+}
+
+/*--------------------registration------------------------------------------------------------------------*/
+section .reg_img
+{
+    background-color: grey;
+    height: 600px;
+    width: 1390px;
+}
+section .box2
+{
+    height: 500px;
+    width: 400px;
+   background-color: black;
+    /*padding: 5px;*/
+    margin: 0px auto;
+    color: black;
+    opacity: .7;
+}
+input
+{
+    height: 27px;
+    width: 255px;
+}
+
+/*----------------------------------------HISTORY-------------------------------------------*/
+
+section .box3
+{
+    height: 500px;
+    width: 400px;
+   background-color: black;
+    /*padding: 5px;*/
+    margin: 0px auto;
+    color: black;
+    opacity: .7;
+}
+input
+{
+    height: 27px;
+    width: 255px;
+}
